@@ -7,7 +7,7 @@ main > .container {
 }
 
 .colors {
-    background-image: url('./giuseppe.svg');
+    background-image: url('img/cmbl_logo_less_contrast.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -17,7 +17,7 @@ main > .container {
     max-height: 50px;
 }
 .text-title{
-    color: #8faadc;
+    color: white;
 }
 .border-title{
     border-color: #8faadc!important
