@@ -7,7 +7,7 @@ main > .container {
 }
 
 .colors {
-    background-image: url('img/cmbl_logo_less_contrast.png');
+    background-image: url('./bg4.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -16,23 +16,9 @@ main > .container {
 .logo{
     max-height: 50px;
 }
-.text-title{
-    color: white;
-}
-.border-title{
-    border-color: #8faadc!important
-}
-.bg-title{
-    background-color: #8faadc;
-}
 .o-1{
-    opacity: 0.9;
-}
-.o-2{
     opacity: 0.8;
 }
 .embed__header{
     background-color: transparent;
 }
-
-.cleanup p{display: inline;}
