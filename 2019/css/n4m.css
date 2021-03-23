@@ -1,0 +1,17 @@
+header.masthead {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 56px);
+  background-image: url("../img/chiappa.png");
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+div.maintitle {
+  border-radius: 10px;
+  background: rgba(255,255,255,0.6)
+}
+div.maintitle a{
+  font-weight: bold;
+}
