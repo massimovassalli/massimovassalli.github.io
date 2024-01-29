@@ -47,7 +47,7 @@
               <a class="nav-link" href="speakers.html">Speakers</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="program.html">Program</a>
+              <a class="nav-link active" href="program.html">Program</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="sponsors.html">Sponsors</a>
@@ -55,10 +55,11 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Register</a>
               <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="register.html">Register to the conference</a></li>
-                  <li><a class="dropdown-item" href="abstract.html">Submit an abstract</a></li>
-                  <li><a class="dropdown-item" href="fees.html">Information on fees</a></li>
-                  <li><a class="dropdown-item active" href="support.html">Available Support</a></li>  
+                <li><a class="dropdown-item" href="register.html">Register to the conference</a></li>
+                <li><a class="dropdown-item" href="abstract.html">Submit an abstract</a></li>
+                <li><a class="dropdown-item" href="fees.html">Information on fees</a></li>
+                <li><a class="dropdown-item" href="support.html">Available Support</a></li>
+  
               </ul>
             </li>
           </ul>
@@ -72,47 +73,15 @@
 
     <div class="p-3 mb-4 rounded text-body-emphasis bg-body-secondary">
         <div class="col px-0">
-          <h1 class="display-4 fst-italic">Institutional support</h1>
+          <h1 class="display-4 fst-italic">Program</h1>
           <p class="lead my-3">
-            We are very grateful to our institutional partners, for their support to the event
-            and to enable young scientists to participate through specific grants and
-            boursaries. Have a look at the list below to find more information.
+            The program is organised along 5 days, starting on Sunday afternoon 3/3/2024 with an opening session and 
+            going on till Thursday lunch time, to let people some flexibility to leave. 
           </p>
         </div>
       </div>
 
-
-      <div class="container marketing">
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-          <div class="col-lg-4">
-            <img src="assets/cob.png" class="bd-placeholder-img rounded-circle" width="415" height="140" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <h2 class="fw-normal">The Company of Biologists</h2>
-            <p>The Company of Biologists is a not-for-profit publishing organisation dedicated to supporting and inspiring the biological community. 
-              The Company of Biologists is supporting the internationalisation of the conference. 
-            </p>
-            <p><a class="btn btn-secondary" target="_blank" href="http://www.biologists.com">Visit website &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img src="assets/EMBO-logo.png" class="bd-placeholder-img rounded-circle" width="415" height="140" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <h2 class="fw-normal">EMBO</h2>
-            <p>EMBO is an organization of more than 2,000 leading researchers that promotes excellence in the life sciences in Europe and beyond. 
-              EMBO is supporting Young Investigator Lectures (see the program). 
-            </p>
-            <p><a class="btn btn-secondary" target="_blank" href="http://www.embo.org">Visit website &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img src="assets/sibpa.png" class="bd-placeholder-img rounded-circle" width="415" height="140" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <h2 class="fw-normal">SIBPA</h2>
-            <p>The Italian Society for Pure and Applied Biophysics (SIBPA) is supporting the 
-              particpation of young SIBPA associates to N4M. Contact us directly  
-            at <a href="mailto:n4m@mechanobiology.eu">n4m@mechanobiology.eu</a> to apply.</p>
-            <p><a class="btn btn-secondary" href="https://www.sibpa.it" target="_blank">Visit website &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
-   </div>
-
-
+      {XXX}
 
 </main>
   
@@ -141,7 +110,7 @@
                       <div class="col-sm bg-transparent"><a href="http://www.sibpa.it" target="_blank"><img src="assets/sibpa.png" class="img-fluid"></a></div>
                       <div class="col-sm bg-transparent"><a href="http://www.embo.org" target="_blank"><img src="assets/EMBO-logo.png" class="img-fluid img"></a></div>
                       <div class="col-sm"><a href="https://www.biologists.com/" target="_blank"><img src="assets/cob.png" class="img-fluid img"></a></div>
-                  </div>      
+                  </div>       
                 </div>       
                 </div>
 
@@ -158,6 +127,11 @@
 
 
 <script src="./js/bootstrap.bundle.min.js"></script>
+<script src=""></script>
+<script>
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+</script>
 
     </body>
 </html>
