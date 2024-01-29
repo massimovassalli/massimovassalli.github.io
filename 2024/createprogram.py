@@ -60,7 +60,7 @@ for ses in order:
         if line[3]=='w':
             over='<span class="text-warning"></span>'
         else:
-            over=f'<button data-bs-toggle="popover" data-bs-content="{line[4]}" role="button" data-bs-trigger="focus" data-bs-title="{line[3]}" class="btn btn-link text-decoration-none text-warning">{line[3]}</button>'
+            over=f'<button data-bs-toggle="popover" data-bs-placement="top" data-bs-content="{line[4]}" role="button" data-bs-trigger="focus" data-bs-title="{line[3]}" class="btn btn-link text-decoration-none text-warning">{line[3]}</button>'
         bold=''
         if line[5]=='N':
             bold=f'text-{colses[ses]}'
