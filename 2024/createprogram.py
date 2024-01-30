@@ -16,14 +16,9 @@ with open('2024/database.csv', mode ='r') as f:
         if elements[8]=='A':
             sessions[session].append([elements[i] for i in [1,2,3,4,5,7]])
 
-sessions['Discussion']={}
-
 headers = ['3/3@17:00','4/3@9:00','4/3@16:00','5/3@9:00','5/3@14:00','6/3@9:00','6/3@16:00','7/3@9:00']
-
-sessions['Discussion']={}
-
 titles = ['Opening session','Nanomechanics and Mechanosensing','Cellular mechanobiology and mechanotransduction','Modelling mechanobiology',
-          'Discussion','Collective cellular processes','Organoids and multicellular systems','Closing session']
+          'Round Table Discussion','Collective cellular processes','Organoids and multicellular systems','Closing session']
 
 order=['Opening','Nanomechanics and Mechanosensing','Cellular Mechanobiology and Mechanotransduction',
        'Modelling mechanobiology','Discussion','Collective Cellular Processes','Organoids and Multicellular Systems','Closing']
