@@ -39,6 +39,8 @@ for ses in order:
     colses[ses]=colors[i]
     i+=1
 
+embo='<img src="./assets/EMBO-logo.png" width="100">'
+
 for ses in order:
     data = sessions[ses]
     card = '''<div class="col mb-4">
@@ -59,7 +61,10 @@ for ses in order:
         bold=''
         if line[5]=='N':
             bold=f'text-{colses[ses]}'
-        card+=f'<li class="list-group-item"><span class="{bold}">{line[1]} {line[0]}</span>, '
+        name = f'{line[1]} {line[0]}'
+        if line[0]=='Treutlein' or line[0]=='Ruprecht':
+            line[2]+=embo
+        card+=f'<li class="list-group-item"><span class="{bold}">{name}</span>, '
 
         card+=f'<span class="text-secondary">{line[2]}</span><br>{over}</li>\n'
     card+='''</ul>
