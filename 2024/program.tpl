@@ -81,6 +81,10 @@
         </div>
       </div>
 
+      <div class="alert alert-warning" role="alert">
+  Th final program is online. You can <a href="assets/program.pdf">download it here</a>!
+</div>
+
       {XXX}
 
 </main>
