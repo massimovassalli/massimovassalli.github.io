@@ -1,0 +1,345 @@
+{
+  "title": "N4M 2027",
+  "theme": "Systems Mechanobiology: Mechanical phenotyping, Multiplexing, and Modelling",
+  "date": "7th to 11th March 2027",
+  "location": "Camogli, Genova, Italy",
+  "description": "The 2027 edition of Nanoengineering for Mechanobiology will connect measurements, models, and translational tools across scales.",
+  "venue": {
+    "name": "Hotel Cenobio dei Dogi",
+    "location": "Camogli, Genova, Italy",
+    "image": "../img/cassiopea.jpg",
+    "image_alt": "The Cassiopea room at Hotel Cenobio dei Dogi",
+    "description": "N4M returns to the Hotel Cenobio dei Dogi, overlooking the Ligurian Sea in Camogli. The hotel is within walking distance of Camogli station and provides the informal setting that has become part of the meeting's identity.",
+    "url": "https://www.cenobio.it/it/home",
+    "gallery_url": "https://www.cenobio.it/it/Gallery",
+    "maps_url": "https://maps.app.goo.gl/ms74LgMtEoFC1RYQ7"
+  },
+  "important_dates": {
+    "abstract_deadline": "To be announced",
+    "early_bird_deadline": "To be announced"
+  },
+  "registration": {
+    "registration_url": "",
+    "abstract_url": "",
+    "registration_note": "Registration details and fees will be published soon.",
+    "abstract_note": "Abstract submission will open soon. Please prepare contributions using the N4M template."
+  },
+  "organisers": [
+    {
+      "name": "ETH Zurich, Department of Biosystems Science and Engineering",
+      "logo": "../2024/assets/eth_w.png",
+      "href": "https://bsse.ethz.ch/",
+      "class": "organiser-eth"
+    },
+    {
+      "name": "Centre for the Cellular Microenvironment",
+      "logo": "../img/cemi-logo.svg",
+      "href": "https://glasgow.thecemi.org/",
+      "class": "organiser-cemi"
+    }
+  ],
+  "institutional_supporters": [],
+  "sponsors": [
+    {
+      "name": "Gold sponsor available",
+      "level": "Gold",
+      "logo": ""
+    },
+    {
+      "name": "Silver sponsor available",
+      "level": "Silver",
+      "logo": ""
+    },
+    {
+      "name": "Silver sponsor available",
+      "level": "Silver",
+      "logo": ""
+    },
+    {
+      "name": "Silver sponsor available",
+      "level": "Silver",
+      "logo": ""
+    },
+    {
+      "name": "Silver sponsor available",
+      "level": "Silver",
+      "logo": ""
+    },
+    {
+      "name": "Bronze sponsor available",
+      "level": "Bronze",
+      "logo": ""
+    },
+    {
+      "name": "Bronze sponsor available",
+      "level": "Bronze",
+      "logo": ""
+    },
+    {
+      "name": "Bronze sponsor available",
+      "level": "Bronze",
+      "logo": ""
+    },
+    {
+      "name": "Bronze sponsor available",
+      "level": "Bronze",
+      "logo": ""
+    }
+  ],
+  "topics": [
+    "Mechanical phenotyping across scales",
+    "Multiplexed measurement workflows",
+    "Data-informed and physics-based modelling",
+    "Mechanobiology in disease and regeneration"
+  ],
+  "speakers": [
+    {
+      "name": "Barbara Treutlein",
+      "affiliation": "ETH Zurich, Department of Biosystems Science and Engineering",
+      "field": "Quantitative developmental biology",
+      "summary": "",
+      "image": "speakers/barbara-treutlein.jpg",
+      "url": "https://bsse.ethz.ch/qdb/the-group/people/person-detail.barbara.html"
+    },
+    {
+      "name": "Johanna Ivaska",
+      "affiliation": "University of Turku, Turku Bioscience Centre",
+      "field": "Cell adhesion and cancer",
+      "summary": "",
+      "image": "speakers/johanna-ivaska.jpg",
+      "url": "https://www.utu.fi/en/people/johanna-ivaska"
+    },
+    {
+      "name": "Jan Brugués",
+      "affiliation": "TU Dresden, Physics of Life, Cluster of Excellence",
+      "field": "Spatiotemporal organization of subcellular structures",
+      "summary": "",
+      "image": "speakers/bruges.jpg",
+      "url": "https://physics-of-life.tu-dresden.de/team/pol-groups/brugues/people"
+    },
+    {
+      "name": "Serena Zacchigna",
+      "affiliation": "International Centre for Genetic Engineering and Biotechnology (ICGEB), Trieste",
+      "field": "Cardiovascular biology",
+      "summary": "",
+      "image": "speakers/serena-zacchigna.jpg",
+      "url": "https://www.icgeb.org/group-leader-serena-zacchigna/"
+    },
+    {
+      "name": "Gray Camp",
+      "affiliation": "Institute of Human Biology, University of Basel",
+      "field": "Systems mechanobiology",
+      "summary": "",
+      "image": "speakers/gray-camp.jpg",
+      "url": "https://institutehumanbiology.com/team/gray-camp/"
+    },
+    {
+      "name": "Carlijn Bouten",
+      "affiliation": "Eindhoven University of Technology (TU/e), Biomedical Engineering",
+      "field": "Mechanobiology and regenerative medicine",
+      "summary": "",
+      "image": "speakers/carlijn-bouten.jpg",
+      "url": "https://www.tue.nl/en/research/researchers/carlijn-bouten/"
+    },
+    {
+      "name": "Danijela Matic Vignjevic",
+      "affiliation": "Institut Curie, Paris",
+      "field": "Cell migration and invasion",
+      "summary": "",
+      "image": "speakers/danijela-matic-vignjevic.jpg",
+      "url": "https://institut-curie.org/person/danijela-matic-vignjevic"
+    },
+    {
+      "name": "Michael Krieg",
+      "affiliation": "ICFO - The Institute of Photonic Sciences, Barcelona",
+      "field": "Neurophotonics and mechanical systems biology",
+      "summary": "",
+      "image": "speakers/michael-krieg.png",
+      "url": "https://www.icfo.eu/research-group/29/nmsb/home/"
+    },
+    {
+      "name": "Anna Erzberger",
+      "affiliation": "EMBL Heidelberg, Theory of Cellular and Multicellular Organisation",
+      "field": "Theoretical biophysics",
+      "summary": "",
+      "image": "speakers/anna-erzberger.jpg",
+      "url": "https://www.embl.org/people/person/anna-erzberger/"
+    },
+    {
+      "name": "Pere Roca-Cusachs",
+      "affiliation": "Institute for Bioengineering of Catalonia (IBEC), Barcelona",
+      "field": "Mechanobiology",
+      "summary": "",
+      "image": "speakers/pere-roca-cusachs.png",
+      "url": "https://ibecbarcelona.eu/research-groups/cellular-and-molecular-mechanobiology/"
+    }
+  ],
+  "sessions": [
+    {
+      "time": "Sunday 17:00",
+      "title": "Welcome cocktail & opening session",
+      "chair": "To be confirmed",
+      "items": [
+        {
+          "time": "17:00",
+          "type": "Welcome reception",
+          "title": "Welcome cocktail and informal networking"
+        },
+        {
+          "time": "18:00",
+          "type": "Opening session",
+          "title": "Opening remarks and setting the scene for N4M 2027"
+        },
+        {
+          "time": "18:30",
+          "type": "Invited speaker",
+          "title": "Keynote to be announced"
+        }
+      ]
+    },
+    {
+      "time": "Monday 09:00",
+      "title": "Session 1 · Mechanical phenotyping",
+      "chair": "To be confirmed",
+      "items": [
+        {
+          "time": "09:00",
+          "type": "Invited speaker",
+          "title": "Session keynote to be announced"
+        },
+        {
+          "time": "09:45",
+          "type": "Contributed talk",
+          "title": "Slot open"
+        },
+        {
+          "time": "11:00",
+          "type": "Poster session",
+          "title": "Poster session and sponsor exhibit open"
+        }
+      ]
+    },
+    {
+      "time": "Monday 14:00",
+      "title": "Session 2 · Multiplexed measurement workflows",
+      "chair": "To be confirmed",
+      "items": [
+        {
+          "time": "14:00",
+          "type": "Invited speaker",
+          "title": "Session keynote to be announced"
+        },
+        {
+          "time": "14:45",
+          "type": "Contributed talk",
+          "title": "Slot open"
+        },
+        {
+          "time": "16:15",
+          "type": "Discussion",
+          "title": "Open discussion and coffee break"
+        }
+      ]
+    },
+    {
+      "time": "Tuesday 09:00",
+      "title": "Session 3 · Data-informed and physics-based modelling",
+      "chair": "To be confirmed",
+      "items": [
+        {
+          "time": "09:00",
+          "type": "Invited speaker",
+          "title": "Session keynote to be announced"
+        },
+        {
+          "time": "09:45",
+          "type": "Contributed talk",
+          "title": "Slot open"
+        },
+        {
+          "time": "11:00",
+          "type": "Poster session",
+          "title": "Poster session and sponsor exhibit continue"
+        }
+      ]
+    },
+    {
+      "time": "Tuesday 14:00",
+      "title": "Session 4 · Mechanobiology in disease and regeneration",
+      "chair": "To be confirmed",
+      "items": [
+        {
+          "time": "14:00",
+          "type": "Invited speaker",
+          "title": "Session keynote to be announced"
+        },
+        {
+          "time": "14:45",
+          "type": "Contributed talk",
+          "title": "Slot open"
+        },
+        {
+          "time": "16:30",
+          "type": "Discussion",
+          "title": "Round-table discussion"
+        }
+      ]
+    },
+    {
+      "time": "Wednesday 09:00",
+      "title": "Session 5 · Translational mechanobiology",
+      "chair": "To be confirmed",
+      "items": [
+        {
+          "time": "09:00",
+          "type": "Special translational session",
+          "title": "Translational applications and clinical relevance"
+        },
+        {
+          "time": "10:30",
+          "type": "Poster session",
+          "title": "Poster session and sponsor exhibit continue"
+        }
+      ]
+    },
+    {
+      "time": "Wednesday afternoon",
+      "title": "Free afternoon",
+      "chair": "Open",
+      "items": [
+        {
+          "time": "Afternoon",
+          "type": "Free block",
+          "title": "Explore the territory or stay at the hotel for informal discussion"
+        },
+        {
+          "time": "Late afternoon",
+          "type": "Editorial corner",
+          "title": "Editorial corner and open discussion"
+        }
+      ]
+    },
+    {
+      "time": "Thursday 09:00",
+      "title": "Session 6 · Synthesis and future directions",
+      "chair": "To be confirmed",
+      "items": [
+        {
+          "time": "09:00",
+          "type": "Invited speaker",
+          "title": "Closing perspective or synthesis talk"
+        },
+        {
+          "time": "10:15",
+          "type": "Discussion",
+          "title": "Take-home messages and community discussion"
+        },
+        {
+          "time": "11:30",
+          "type": "Wrap-up",
+          "title": "Closing remarks and departure arrangements"
+        }
+      ]
+    }
+  ]
+}
