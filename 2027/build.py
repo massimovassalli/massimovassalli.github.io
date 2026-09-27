@@ -96,7 +96,7 @@ def layout(content, active, private=False):
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="index.html"><img src="../img/n4m_k.svg" alt="Nanoengineering for Mechanobiology"></a>
+        <a class="brand" href="index{suffix}.html"><img src="../img/n4m_k.svg" alt="Nanoengineering for Mechanobiology"></a>
         <nav aria-label="Edition navigation">
           {navigation}
           <a href="../index.html">N4M home</a>
@@ -205,6 +205,44 @@ def build_home(private=False):
             f'{sponsor_markup(gold_sponsor)}'
             f'</div>'
         )
+    home_links = "".join(
+        f'<a href="{("overview" if not private else "overview_tmp")}.html">Overview</a>'
+        f'<a href="{("venue" if not private else "venue_tmp")}.html">Venue</a>'
+        f'<a href="{("speakers" if not private else "speakers_tmp")}.html">Speakers</a>'
+        f'<a href="{("program" if not private else "program_tmp")}.html">Programme</a>'
+        for _ in [0]
+    )
+    organisers_html = ""
+    if private:
+        organisers_html = f"""
+          <section class="organiser-section">
+            <h2>Organisers</h2>
+            <div class="speaker-grid">
+              <article class="speaker-card speaker-card--compact">
+                <div class="speaker-card__body">
+                  <span class="speaker-tag">Organiser</span>
+                  <h3>Daniel Müller</h3>
+                  <div class="speaker-meta">Full Professor, Department of Biosystems Science and Engineering, ETH Zurich, Basel</div>
+                  <a href="https://bsse.ethz.ch/people/detail-person.MTcwMTk1.TGlzdC8yNjY5LC0xMDExNjczNjI=.html" target="_blank" rel="noopener noreferrer" class="speaker-link">visit website</a>
+                </div>
+                <div class="speaker-card__media">
+                  <img src="speakers/daniel-muller.jpg" alt="Daniel Müller" class="speaker-card__image">
+                </div>
+              </article>
+              <article class="speaker-card speaker-card--compact">
+                <div class="speaker-card__body">
+                  <span class="speaker-tag">Organiser</span>
+                  <h3>Massimo Vassalli</h3>
+                  <div class="speaker-meta">University of Glasgow, James Watt School of Engineering</div>
+                  <a href="https://www.gla.ac.uk/schools/engineering/staff/massimovassalli/" target="_blank" rel="noopener noreferrer" class="speaker-link">visit website</a>
+                </div>
+                <div class="speaker-card__media">
+                  <img src="speakers/massimo-vassalli.png" alt="Massimo Vassalli" class="speaker-card__image">
+                </div>
+              </article>
+            </div>
+          </section>
+        """
     content = f"""
       <div class="home-hero row g-5 align-items-start">
         <div class="col-lg-8">
@@ -212,10 +250,10 @@ def build_home(private=False):
           <h1>{esc(DATA['title'])}</h1>
           <h2 class="home-theme">{esc(DATA['theme'])}</h2>
           <div class="home-links">
-            <a href="overview.html">Overview</a>
-            <a href="venue.html">Venue</a>
-            <a href="speakers.html">Speakers</a>
-            <a href="program.html">Programme</a>
+            <a href="{('overview.html' if not private else 'overview_tmp.html')}">Overview</a>
+            <a href="{('venue.html' if not private else 'venue_tmp.html')}">Venue</a>
+            <a href="{('speakers.html' if not private else 'speakers_tmp.html')}">Speakers</a>
+            <a href="{('program.html' if not private else 'program_tmp.html')}">Programme</a>
             <a href="mailto:massimo.vassalli@glasgow.ac.uk">Contact</a>
           </div>
           <section class="home-details">
@@ -227,6 +265,7 @@ def build_home(private=False):
               <li>Early-bird registration deadline: {esc(dates['early_bird_deadline'])}</li>
             </ul>
           </section>
+          {organisers_html}
         </div>
         <aside class="col-lg-4 sponsor-rail" aria-labelledby="home-sponsors-heading">
           <div class="sponsor-header-row">
