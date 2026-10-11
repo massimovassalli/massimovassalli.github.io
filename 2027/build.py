@@ -159,10 +159,41 @@ def registration_action(url, label):
 def build_registration(private=False):
     dates = DATA["important_dates"]
     registration = DATA["registration"]
+    fee_cards = []
+    for fee in registration.get("fees", []):
+        tiers = "".join(
+            f"<li><span>{esc(tier['label'])}</span><strong>&nbsp;€{tier['price']}</strong></li>"
+            for tier in fee.get("tiers", [])
+        )
+        subtitle = fee.get("subtitle")
+        subtitle_html = f'<p class="fee-subtitle">{esc(subtitle)}</p>' if subtitle else ""
+        features = "".join(f"<li>{esc(item)}</li>" for item in fee.get("highlights", []))
+        after_eb = fee.get("after_eb")
+        after_eb_html = f'<p class="fee-note">After early bird: +€{after_eb}</p>' if after_eb is not None else ""
+        featured_class = " border-primary" if fee.get("featured") else ""
+        header_class = " text-bg-primary border-primary" if fee.get("featured") else ""
+        fee_cards.append(
+            f"""
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm{featured_class}">
+                <div class="card-header py-3 fee-card-header{header_class}">
+                  <h4 class="my-0 fw-normal">{esc(fee['name'])}</h4>
+                  {subtitle_html}
+                </div>
+                <div class="card-body">
+                  <ul class="list-unstyled mt-3 mb-4 fee-tiers">{tiers}</ul>
+                  {after_eb_html}
+                  <ul class="list-unstyled mt-3 mb-4">{features}</ul>
+                </div>
+              </div>
+            </div>
+            """
+        )
+    fee_cards_html = "".join(fee_cards)
     content = f"""
       <p class="eyebrow">N4M 2027</p>
       <h1>Registration</h1>
-      <p class="lead">Registration and abstract submission will be managed from this page as the 2027 meeting opens.</p>
+      <p class="lead">Registration and abstract submission are now open, and all key dates and updates are published here.</p>
       <section class="date-list" aria-labelledby="dates-heading">
         <h2 id="dates-heading">Important dates</h2>
         <dl>
@@ -184,6 +215,12 @@ def build_registration(private=False):
           {registration_action(registration['abstract_url'], 'Abstract submission form')}
         </section>
       </div>
+      <section class="mt-5">
+        <p class="eyebrow">Fees</p>
+        <h2>Registration packages</h2>
+        <p class="lead">{esc(registration['fee_note'])}</p>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">{fee_cards_html}</div>
+      </section>
     """
     return layout(content, "registration", private=private)
 
@@ -359,6 +396,18 @@ def build_speakers(private=False):
 
 
 def build_program(private=False):
+    overview = []
+    for day in DATA.get("program_overview", []):
+        overview.append(
+            f"""
+            <article class="program-day-overview">
+              <p class="eyebrow">{esc(day['day'])}</p>
+              <div class="program-day-range">{esc(day['range'])}</div>
+              <h2>{esc(day['title'])}</h2>
+              <p>{esc(day['summary'])}</p>
+            </article>
+            """
+        )
     sessions = []
     for session in DATA["sessions"]:
         items = "".join(
@@ -370,7 +419,19 @@ def build_program(private=False):
             f"<h2>{esc(session['title'])}</h2><p>Chair: {esc(session['chair'])}</p>"
             f"<ul class=\"program-list\">{items}</ul></article>"
         )
-    content = f"<p class=\"eyebrow\">N4M 2027</p><h1>Programme</h1>{''.join(sessions)}"
+    content = f"""
+      <p class="eyebrow">N4M 2027</p>
+      <h1>Programme</h1>
+      <p class="lead">The meeting follows the same broad rhythm as the 2024 edition: a Sunday opening, a full Monday–Wednesday scientific programme, and a Thursday closing session before departure.</p>
+      <section aria-labelledby="day-overview-heading">
+        <h2 id="day-overview-heading">Overview by day</h2>
+        <div class="program-overview-grid">{''.join(overview)}</div>
+      </section>
+      <section aria-labelledby="detailed-programme-heading">
+        <h2 id="detailed-programme-heading">Detailed programme</h2>
+        <p class="lead">To be announced.</p>
+      </section>
+    """
     return layout(content, "program", private=private)
 
 

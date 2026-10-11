@@ -15,14 +15,66 @@
     "maps_url": "https://maps.app.goo.gl/ms74LgMtEoFC1RYQ7"
   },
   "important_dates": {
-    "abstract_deadline": "To be announced",
-    "early_bird_deadline": "To be announced"
+    "abstract_deadline": "November 22nd",
+    "early_bird_deadline": "January 31st"
   },
   "registration": {
     "registration_url": "",
     "abstract_url": "",
-    "registration_note": "Registration details and fees will be published soon.",
-    "abstract_note": "Abstract submission will open soon. Please prepare contributions using the N4M template."
+    "registration_note": "Registration is now open for the 2027 meeting. Please complete the registration form below when you are ready to submit your booking.",
+    "abstract_note": "Abstract submissions are now open. Please prepare your contribution using the N4M template and submit it through the form below.",
+    "fee_note": "All prices below are the early-bird registration rates. After the early-bird deadline, add €50 to the Light package, and €100 to the Standard and Full packages.",
+    "fees": [
+      {
+        "name": "Light",
+        "subtitle": "Conference only",
+        "featured": false,
+        "after_eb": 50,
+        "tiers": [
+          {"label": "Student", "price": 300},
+          {"label": "Senior", "price": 400}
+        ],
+        "highlights": [
+          "Conference participation",
+          "Coffee breaks",
+          "Welcome cocktail",
+          "No accommodation"
+        ]
+      },
+      {
+        "name": "Standard",
+        "subtitle": "Light + accommodation",
+        "featured": false,
+        "after_eb": 100,
+        "tiers": [
+          {"label": "Shared", "price": 650},
+          {"label": "Single", "price": 950}
+        ],
+        "highlights": [
+          "Conference participation",
+          "Coffee breaks",
+          "Welcome cocktail",
+          "Accommodation incl. breakfast"
+        ]
+      },
+      {
+        "name": "Full",
+        "subtitle": "Standard + lunches and dinners",
+        "featured": true,
+        "after_eb": 100,
+        "tiers": [
+          {"label": "Shared", "price": 800},
+          {"label": "Single", "price": 1100}
+        ],
+        "highlights": [
+          "Conference participation",
+          "Coffee breaks",
+          "Welcome cocktail",
+          "4 lunches + 2 dinners",
+          "Accommodation incl. breakfast"
+        ]
+      }
+    ]
   },
   "organisers": [
     {
@@ -172,6 +224,46 @@
       "summary": "",
       "image": "speakers/pere-roca-cusachs.png",
       "url": "https://ibecbarcelona.eu/research-groups/cellular-and-molecular-mechanobiology/"
+    },
+    {
+      "name": "Christophe Zimmer",
+      "affiliation": "Institut Pasteur, Imaging and Modeling",
+      "field": "Imaging and AI",
+      "summary": "",
+      "image": "speakers/christophe-zimmer.jpg",
+      "url": "https://research.pasteur.fr/en/team/imaging-and-modeling/"
+    }
+  ],
+  "program_overview": [
+    {
+      "day": "Sunday",
+      "range": "17:00–20:30",
+      "title": "Welcome cocktail & opening session",
+      "summary": "Arrival, informal networking, and the opening of the meeting."
+    },
+    {
+      "day": "Monday",
+      "range": "09:00–18:00",
+      "title": "Session 1 + Session 2",
+      "summary": "Mechanical phenotyping in the morning and multiplexed measurement workflows in the afternoon."
+    },
+    {
+      "day": "Tuesday",
+      "range": "09:00–18:00",
+      "title": "Session 3 + Session 4",
+      "summary": "Modelling and disease/regeneration themes, with poster and discussion blocks through the day."
+    },
+    {
+      "day": "Wednesday",
+      "range": "09:00–17:30",
+      "title": "Session 5 + free afternoon",
+      "summary": "Translational mechanobiology in the morning, followed by a more open afternoon for discussion and informal exchange."
+    },
+    {
+      "day": "Thursday",
+      "range": "09:00–12:00",
+      "title": "Closing session",
+      "summary": "Synthesis, take-home messages, and closing remarks before departure."
     }
   ],
   "sessions": [
