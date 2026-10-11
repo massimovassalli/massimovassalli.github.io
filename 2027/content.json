@@ -234,6 +234,55 @@
       "url": "https://research.pasteur.fr/en/team/imaging-and-modeling/"
     }
   ],
+  "overview": {
+    "title": "Towards Systems Mechanobiology",
+    "intro": [
+      "Mechanobiology has revealed how forces influence cells, tissues and organisms. The next challenge is to understand how mechanical information is integrated across scales and how it interacts with cellular state, tissue organisation and biological function.",
+      "N4M 2027 brings together leaders in mechanobiology, quantitative imaging, developmental biology, AI, omics and theoretical modelling to explore this emerging systems-level perspective. From molecular mechanisms and cellular decision-making to tissue organisation and predictive computational frameworks, the meeting will examine how new technologies and interdisciplinary approaches are transforming mechanobiology into a quantitative and predictive science."
+    ],
+    "sessions": [
+      {
+        "title": "Encoding Mechanical Information",
+        "question": "How do cells sense, process and respond to force?",
+        "description": "Mechanical signals influence migration, adhesion, differentiation and cell fate. This session explores the molecular and cellular mechanisms that convert physical cues into biological responses.",
+        "speakers": [
+          "Pere Roca-Cusachs",
+          "Johanna Ivaska",
+          "Danijela Matic Vignjevic"
+        ]
+      },
+      {
+        "title": "Building Biological Systems",
+        "question": "How does mechanics shape tissues, organs and development?",
+        "description": "Mechanical interactions drive the emergence of structure and function in complex biological systems. From development and regeneration to cardiovascular biology and organoid models, this session examines mechanics as an organising principle of life.",
+        "speakers": [
+          "Barbara Treutlein",
+          "Carlijn Bouten",
+          "Serena Zacchigna"
+        ]
+      },
+      {
+        "title": "Seeing Mechanics in Action",
+        "question": "How do we measure forces and mechanical states in living systems?",
+        "description": "New imaging, photonics and quantitative measurement technologies are making previously inaccessible aspects of biology observable. This session focuses on capturing mechanics in space and time, from subcellular organisation to intact tissues.",
+        "speakers": [
+          "Michael Krieg",
+          "Jan Brugués",
+          "Speaker to be announced"
+        ]
+      },
+      {
+        "title": "From Data to Prediction",
+        "question": "Can mechanobiology become predictive?",
+        "description": "Advances in AI, quantitative imaging, omics and theory are enabling researchers to move beyond observation towards integrated models of biological systems. This session explores the computational foundations of next-generation mechanobiology.",
+        "speakers": [
+          "Gray Camp",
+          "Christophe Zimmer",
+          "Anna Erzberger"
+        ]
+      }
+    ]
+  },
   "program_overview": [
     {
       "day": "Sunday",

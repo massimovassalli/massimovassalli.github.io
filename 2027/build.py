@@ -116,14 +116,37 @@ def layout(content, active, private=False):
 
 
 def build_overview(private=False):
-    topics = "".join(f"<li>{esc(topic)}</li>" for topic in DATA["topics"])
+    overview = DATA.get("overview", {})
+    intro_paragraphs = "".join(f"<p>{esc(p)}</p>" for p in overview.get("intro", []))
+    session_cards = []
+    speakers_href = "speakers.html" if not private else "speakers_tmp.html"
+    for session in overview.get("sessions", []):
+        speakers = "".join(
+            f"<li>{esc(name)}</li>" for name in session.get("speakers", [])
+        )
+        session_cards.append(
+            f"""
+            <article class="overview-session-card">
+              <div class="overview-session-header">
+                <span class="overview-session-number">Session {len(session_cards) + 1}</span>
+                <h2>{esc(session['title'])}</h2>
+              </div>
+              <p class="overview-session-question"><strong>{esc(session['question'])}</strong></p>
+              <p class="overview-session-description">{esc(session['description'])}</p>
+              <div class="overview-speakers" tabindex="0">
+                <a class="overview-speakers-label" href="{speakers_href}">Invited speakers</a>
+                <ul class="overview-speakers-list">{speakers}</ul>
+              </div>
+            </article>
+            """
+        )
     content = f"""
       <p class="eyebrow">{esc(DATA['date'])} · {esc(DATA['location'])}</p>
-      <h1>{esc(DATA['theme'])}</h1>
-      <p class="lead">{esc(DATA['description'])}</p>
-      <section>
-        <h2>Focus areas</h2>
-        <ul class="topic-list">{topics}</ul>
+      <h1>{esc(overview.get('title', DATA['theme']))}</h1>
+      <div class="overview-intro">{intro_paragraphs}</div>
+      <section aria-labelledby="overview-sessions-heading" class="overview-sessions-section">
+        <h2 id="overview-sessions-heading">Session themes</h2>
+        <div class="overview-session-grid">{''.join(session_cards)}</div>
       </section>
     """
     return layout(content, "overview", private=private)
@@ -294,8 +317,13 @@ def build_home(private=False):
             <a href="mailto:massimo.vassalli@glasgow.ac.uk">Contact</a>
           </div>
           <section class="home-details">
-            <h2>At a glance</h2>
-            <ul class="topic-list">{topics}</ul>
+            <div class="home-intro-text">
+              <p>Mechanobiology has transformed our understanding of how cells sense, generate and respond to forces. Yet many of the fundamental challenges ahead can no longer be addressed by studying isolated molecules, pathways or individual cells.</p>
+              <p><strong>N4M 2027 explores mechanobiology at the systems level.</strong></p>
+              <p>From multicellular organisation and tissue dynamics to development, regeneration and disease, the field is increasingly challenged to connect mechanics across scales and to integrate physical, molecular and biological information into coherent models. Progress will require new approaches for measuring forces and material properties in complex three-dimensional environments, advanced imaging and correlative methodologies, and computational frameworks capable of linking mechanics to cellular states and function.</p>
+              <p>The next generation of mechanobiology will be driven not only by innovative technologies, but also by the convergence of quantitative modelling, artificial intelligence, spatial and single-cell omics, and data-intensive approaches that transform observations into predictive understanding.</p>
+              <p>N4M 2027 brings together researchers developing the concepts, tools and datasets that will enable this transition, with the shared goal of understanding how mechanical information shapes biological systems across scales.</p>
+            </div>
             <h2>Important dates</h2>
             <ul class="topic-list">
               <li>Abstract submission deadline: {esc(dates['abstract_deadline'])}</li>
