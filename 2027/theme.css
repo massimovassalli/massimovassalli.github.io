@@ -350,6 +350,10 @@ section, article { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px soli
 .organiser-cemi { padding: .35rem .6rem; background: white; }
 
 @media (max-width: 900px) {
+  .page-top-shell { flex-direction: column; gap: 1rem; }
+  .page-gold-banner { flex: 0 0 auto; width: 100%; padding-top: 0; }
+  .page-gold-banner .sponsor-group { min-height: 90px; }
+  .overview-session-grid, .program-overview-grid { grid-template-columns: 1fr; }
   .speaker-row { grid-template-columns: 1fr; }
 }
 @media (max-width: 520px) {
