@@ -349,6 +349,15 @@ section, article { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px soli
 .organiser-eth img { max-width: 154px; padding: 0; }
 .organiser-cemi { padding: .35rem .6rem; background: white; }
 
+@media (max-width: 900px) {
+  .speaker-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .speaker-card { flex-direction: column-reverse; min-height: 0; }
+  .speaker-card__media { flex: 0 0 auto; height: 260px; }
+  .speaker-card--empty .speaker-card__media { display: none; }
+}
+
 @media (max-width: 700px) { .sponsor-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 460px) {
   .sponsor-grid { grid-template-columns: 1fr; }
