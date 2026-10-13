@@ -95,47 +95,65 @@
     {
       "name": "Gold sponsor available",
       "level": "Gold",
-      "logo": ""
+      "logo": "",
+      "description": "Gold sponsor details to be announced.",
+      "website": ""
+    },
+    {
+      "name": "Nanosurf",
+      "level": "Silver",
+      "logo": "../img/sponsors/Nanosurf-Logo-black-hi-res.png",
+      "description": "Nanosurf is a premier provider of atomic force microscopy systems, catering to the demands of scientific research, the nanotechnology industry, semiconductor production, and quality control.",
+      "website": "https://www.nanosurf.com/en/"
     },
     {
       "name": "Silver sponsor available",
       "level": "Silver",
-      "logo": ""
+      "logo": "",
+      "description": "Silver sponsor details to be announced.",
+      "website": ""
     },
     {
       "name": "Silver sponsor available",
       "level": "Silver",
-      "logo": ""
+      "logo": "",
+      "description": "Silver sponsor details to be announced.",
+      "website": ""
     },
     {
       "name": "Silver sponsor available",
       "level": "Silver",
-      "logo": ""
-    },
-    {
-      "name": "Silver sponsor available",
-      "level": "Silver",
-      "logo": ""
+      "logo": "",
+      "description": "Silver sponsor details to be announced.",
+      "website": ""
     },
     {
       "name": "Bronze sponsor available",
       "level": "Bronze",
-      "logo": ""
+      "logo": "",
+      "description": "Bronze sponsor details to be announced.",
+      "website": ""
     },
     {
       "name": "Bronze sponsor available",
       "level": "Bronze",
-      "logo": ""
+      "logo": "",
+      "description": "Bronze sponsor details to be announced.",
+      "website": ""
     },
     {
       "name": "Bronze sponsor available",
       "level": "Bronze",
-      "logo": ""
+      "logo": "",
+      "description": "Bronze sponsor details to be announced.",
+      "website": ""
     },
     {
       "name": "Bronze sponsor available",
       "level": "Bronze",
-      "logo": ""
+      "logo": "",
+      "description": "Bronze sponsor details to be announced.",
+      "website": ""
     }
   ],
   "topics": [
@@ -146,44 +164,20 @@
   ],
   "speakers": [
     {
+      "name": "Anna Erzberger",
+      "affiliation": "EMBL Heidelberg, Theory of Cellular and Multicellular Organisation",
+      "field": "Theoretical biophysics",
+      "summary": "",
+      "image": "speakers/anna-erzberger.jpg",
+      "url": "https://www.embl.org/people/person/anna-erzberger/"
+    },
+    {
       "name": "Barbara Treutlein",
       "affiliation": "ETH Zurich, Department of Biosystems Science and Engineering",
       "field": "Quantitative developmental biology",
       "summary": "",
       "image": "speakers/barbara-treutlein.jpg",
       "url": "https://bsse.ethz.ch/qdb/the-group/people/person-detail.barbara.html"
-    },
-    {
-      "name": "Johanna Ivaska",
-      "affiliation": "University of Turku, Turku Bioscience Centre",
-      "field": "Cell adhesion and cancer",
-      "summary": "",
-      "image": "speakers/johanna-ivaska.jpg",
-      "url": "https://www.utu.fi/en/people/johanna-ivaska"
-    },
-    {
-      "name": "Jan Brugués",
-      "affiliation": "TU Dresden, Physics of Life, Cluster of Excellence",
-      "field": "Spatiotemporal organization of subcellular structures",
-      "summary": "",
-      "image": "speakers/bruges.jpg",
-      "url": "https://physics-of-life.tu-dresden.de/team/pol-groups/brugues/people"
-    },
-    {
-      "name": "Serena Zacchigna",
-      "affiliation": "International Centre for Genetic Engineering and Biotechnology (ICGEB), Trieste",
-      "field": "Cardiovascular biology",
-      "summary": "",
-      "image": "speakers/serena-zacchigna.jpg",
-      "url": "https://www.icgeb.org/group-leader-serena-zacchigna/"
-    },
-    {
-      "name": "Gray Camp",
-      "affiliation": "Institute of Human Biology, Roche Innovation Center",
-      "field": "Systems mechanobiology",
-      "summary": "",
-      "image": "speakers/gray-camp.jpg",
-      "url": "https://institutehumanbiology.com/team/gray-camp/"
     },
     {
       "name": "Carlijn Bouten",
@@ -194,12 +188,52 @@
       "url": "https://www.tue.nl/en/research/researchers/carlijn-bouten/"
     },
     {
+      "name": "Christophe Zimmer",
+      "affiliation": "Institut Pasteur, Imaging and Modeling",
+      "field": "Imaging and AI",
+      "summary": "",
+      "image": "speakers/christophe-zimmer.jpg",
+      "url": "https://research.pasteur.fr/en/team/imaging-and-modeling/"
+    },
+    {
       "name": "Danijela Matic Vignjevic",
       "affiliation": "Institut Curie, Paris",
       "field": "Cell migration and invasion",
       "summary": "",
       "image": "speakers/danijela-matic-vignjevic.jpg",
       "url": "https://institut-curie.org/person/danijela-matic-vignjevic"
+    },
+    {
+      "name": "Gray Camp",
+      "affiliation": "Institute of Human Biology, Roche Innovation Center",
+      "field": "Systems mechanobiology",
+      "summary": "",
+      "image": "speakers/gray-camp.jpg",
+      "url": "https://institutehumanbiology.com/team/gray-camp/"
+    },
+    {
+      "name": "Jacky G. Goetz",
+      "affiliation": "University of Strasbourg, Centre de Recherche en Biomédecine de Strasbourg (CRBS)",
+      "field": "Tumour mechanics",
+      "summary": "",
+      "image": "https://mpzpm.mpg.de/fileadmin/user_upload/News_MPZPM/2026/22025-01-23-Girado/Portrait_Jacky.jpg",
+      "url": "https://www.goetzlab.fr"
+    },
+    {
+      "name": "Jan Brugués",
+      "affiliation": "TU Dresden, Physics of Life, Cluster of Excellence",
+      "field": "Spatiotemporal organization of subcellular structures",
+      "summary": "",
+      "image": "speakers/bruges.jpg",
+      "url": "https://physics-of-life.tu-dresden.de/team/pol-groups/brugues/people"
+    },
+    {
+      "name": "Johanna Ivaska",
+      "affiliation": "University of Turku, Turku Bioscience Centre",
+      "field": "Cell adhesion and cancer",
+      "summary": "",
+      "image": "speakers/johanna-ivaska.jpg",
+      "url": "https://www.utu.fi/en/people/johanna-ivaska"
     },
     {
       "name": "Michael Krieg",
@@ -210,14 +244,6 @@
       "url": "https://www.icfo.eu/research-group/29/nmsb/home/"
     },
     {
-      "name": "Anna Erzberger",
-      "affiliation": "EMBL Heidelberg, Theory of Cellular and Multicellular Organisation",
-      "field": "Theoretical biophysics",
-      "summary": "",
-      "image": "speakers/anna-erzberger.jpg",
-      "url": "https://www.embl.org/people/person/anna-erzberger/"
-    },
-    {
       "name": "Pere Roca-Cusachs",
       "affiliation": "Institute for Bioengineering of Catalonia (IBEC), Barcelona",
       "field": "Mechanobiology",
@@ -226,12 +252,12 @@
       "url": "https://ibecbarcelona.eu/research-groups/cellular-and-molecular-mechanobiology/"
     },
     {
-      "name": "Christophe Zimmer",
-      "affiliation": "Institut Pasteur, Imaging and Modeling",
-      "field": "Imaging and AI",
+      "name": "Serena Zacchigna",
+      "affiliation": "International Centre for Genetic Engineering and Biotechnology (ICGEB), Trieste",
+      "field": "Cardiovascular biology",
       "summary": "",
-      "image": "speakers/christophe-zimmer.jpg",
-      "url": "https://research.pasteur.fr/en/team/imaging-and-modeling/"
+      "image": "speakers/serena-zacchigna.jpg",
+      "url": "https://www.icgeb.org/group-leader-serena-zacchigna/"
     }
   ],
   "overview": {
@@ -268,7 +294,7 @@
         "speakers": [
           "Michael Krieg",
           "Jan Brugués",
-          "Speaker to be announced"
+          "Jacky G. Goetz"
         ]
       },
       {

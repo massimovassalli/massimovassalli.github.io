@@ -20,15 +20,48 @@ def esc(value):
     return html.escape(str(value))
 
 
-def sponsor_markup(item):
-  logo = ""
-  if item.get("logo"):
-    logo = f'<img src="{esc(item["logo"])}" alt="{esc(item["name"])}">'
-  return (
-    f'<div class="sponsor-group sponsor-{esc(item["level"]).lower()}">'
-    f'<span class="sponsor-level">{esc(item["level"])}</span>'
-    f'{logo}<span class="sponsor-name">{esc(item["name"])}</span></div>'
-  )
+def sponsor_page_link(item):
+    target = "sponsors.html"
+    name = item.get("name") or f"{item.get('level', 'Sponsor')} sponsor"
+    if item.get("logo"):
+        logo = f'<img src="{esc(item["logo"])}" alt="{esc(name)}">'
+    else:
+        logo = f'<div class="sponsor-placeholder" aria-hidden="true">{esc(name)}</div>'
+    return (
+        f'<a class="sponsor-group sponsor-{esc(item["level"]).lower()}" href="{target}" aria-label="View details for {esc(name)}">'
+        f'<span class="sponsor-level">{esc(item["level"])}</span>'
+        f'{logo}'
+        f'<span class="sponsor-name">{esc(name)}</span>'
+        f'</a>'
+    )
+
+
+def sponsor_detail_card(item):
+    name = item.get("name") or f"{item.get('level', 'Sponsor')} sponsor"
+    level = item.get("level") or "Sponsor"
+    if item.get("logo"):
+        media = f'<img src="{esc(item["logo"])}" alt="{esc(name)}" class="sponsor-card__image">'
+    else:
+        media = f'<div class="sponsor-card__placeholder" aria-hidden="true">{esc(name[:2].upper() or "SP")}</div>'
+    description = item.get("description") or "Sponsor details to be announced."
+    website = item.get("website")
+    website_link = ""
+    if website:
+        website_link = (
+            f'<a href="{esc(website)}" target="_blank" rel="noopener noreferrer" class="speaker-link sponsor-website-link">'
+            f'Visit website</a>'
+        )
+    return (
+        f'<article class="sponsor-card sponsor-card--{esc(level).lower()}">'
+        f'<div class="sponsor-card__media">{media}</div>'
+        f'<div class="sponsor-card__body">'
+        f'<span class="speaker-tag">{esc(level)} sponsor</span>'
+        f'<h3>{esc(name)}</h3>'
+        f'<p>{esc(description)}</p>'
+        f'{website_link}'
+        f'</div>'
+        f'</article>'
+    )
 
 
 def organiser_markup():
@@ -42,11 +75,12 @@ def organiser_markup():
 def layout(content, active, private=False):
     suffix = "_tmp" if private else ""
     links = [
-    ("2027", f"index{suffix}.html", "home"),
+        ("2027", f"index{suffix}.html", "home"),
         ("Overview", f"overview{suffix}.html", "overview"),
         ("Venue", f"venue{suffix}.html", "venue"),
         ("Speakers", f"speakers{suffix}.html", "speakers"),
         ("Programme", f"program{suffix}.html", "program"),
+        ("Sponsors", f"sponsors{suffix}.html", "sponsors"),
         ("Registration", f"registration{suffix}.html", "registration"),
     ]
     navigation = "".join(
@@ -54,7 +88,7 @@ def layout(content, active, private=False):
         for label, url, key in links
     )
     organisers = organiser_markup()
-    sponsor_groups = "".join(sponsor_markup(item) for item in DATA["sponsors"] if item.get("level") != "Gold")
+    sponsor_groups = "".join(sponsor_page_link(item) for item in DATA["sponsors"] if item.get("level") != "Gold")
     institutional_groups = "".join(
       f'<div class="institutional-group">'
       f'{(f'<img src="{esc(item["logo"])}" alt="{esc(item["name"])}">' if item.get("logo") else "")}'
@@ -63,7 +97,7 @@ def layout(content, active, private=False):
     )
     if not institutional_groups:
         institutional_groups = '<div class="institutional-group institutional-placeholder">Institutional supporters to be announced</div>'
-    sponsor_section = "" if active == "home" else f"""
+    sponsor_section = "" if active in {"home", "sponsors"} else f"""
     <section class="sponsor-strip" aria-labelledby="sponsors-heading">
       <div class="container">
         <p class="eyebrow" id="sponsors-heading">Institutional support</p>
@@ -77,7 +111,7 @@ def layout(content, active, private=False):
     gold_banner = ""
     if active in {"overview", "venue", "speakers", "program"} and gold_sponsor:
         gold_banner = (
-            f'<div class="page-gold-banner">{sponsor_markup(gold_sponsor)}</div>'
+            f'<div class="page-gold-banner">{sponsor_page_link(gold_sponsor)}</div>'
         )
     if gold_banner and active in {"overview", "venue", "speakers", "program"}:
         content = content.replace("<h1>", '<div class="page-top-shell"><div class="page-header-copy"><h1>', 1)
@@ -249,20 +283,20 @@ def build_registration(private=False):
 
 
 def build_home(private=False):
-    sponsors = "".join(sponsor_markup(item) for item in DATA["sponsors"])
+    sponsors = "".join(sponsor_page_link(item) for item in DATA["sponsors"])
     topics = "".join(
         f"<li>{esc(topic)}</li>" for topic in DATA["topics"]
     )
     dates = DATA["important_dates"]
     gold_sponsor = next((item for item in DATA["sponsors"] if item.get("level") == "Gold"), None)
     remaining_sponsors = [item for item in DATA["sponsors"] if item.get("level") != "Gold"]
-    sponsor_stack = "".join(sponsor_markup(item) for item in remaining_sponsors)
+    sponsor_stack = "".join(sponsor_page_link(item) for item in remaining_sponsors)
     gold_banner = ""
     if gold_sponsor:
         gold_banner = (
             f'<div class="home-sponsor-banner" aria-label="Gold sponsor">'
             f'<p class="eyebrow">Gold sponsor</p>'
-            f'{sponsor_markup(gold_sponsor)}'
+            f'{sponsor_page_link(gold_sponsor)}'
             f'</div>'
         )
     home_links = "".join(
@@ -272,37 +306,39 @@ def build_home(private=False):
         f'<a href="{("program" if not private else "program_tmp")}.html">Programme</a>'
         for _ in [0]
     )
-    organisers_html = ""
-    if private:
-        organisers_html = f"""
-          <section class="organiser-section">
-            <h2>Organisers</h2>
-            <div class="speaker-grid">
-              <article class="speaker-card speaker-card--compact">
-                <div class="speaker-card__body">
-                  <span class="speaker-tag">Organiser</span>
-                  <h3>Daniel Müller</h3>
-                  <div class="speaker-meta">Full Professor, Department of Biosystems Science and Engineering, ETH Zurich, Basel</div>
-                  <a href="https://bsse.ethz.ch/people/detail-person.MTcwMTk1.TGlzdC8yNjY5LC0xMDExNjczNjI=.html" target="_blank" rel="noopener noreferrer" class="speaker-link">visit website</a>
-                </div>
-                <div class="speaker-card__media">
-                  <img src="speakers/daniel-muller.jpg" alt="Daniel Müller" class="speaker-card__image">
-                </div>
-              </article>
-              <article class="speaker-card speaker-card--compact">
-                <div class="speaker-card__body">
-                  <span class="speaker-tag">Organiser</span>
-                  <h3>Massimo Vassalli</h3>
-                  <div class="speaker-meta">University of Glasgow, James Watt School of Engineering</div>
-                  <a href="https://www.gla.ac.uk/schools/engineering/staff/massimovassalli/" target="_blank" rel="noopener noreferrer" class="speaker-link">visit website</a>
-                </div>
-                <div class="speaker-card__media">
-                  <img src="speakers/massimo-vassalli.png" alt="Massimo Vassalli" class="speaker-card__image">
-                </div>
-              </article>
-            </div>
-          </section>
-        """
+    organisers_html = f"""
+      <section class="organiser-section">
+        <h2>Organisers</h2>
+        <div class="speaker-grid">
+          <div class="speaker-row">
+            <article class="speaker-card speaker-card--compact">
+              <div class="speaker-card__body">
+                <span class="speaker-tag">Organiser</span>
+                <h3>Daniel Müller</h3>
+                <div class="speaker-meta">Full Professor, Department of Biosystems Science and Engineering, ETH Zurich, Basel</div>
+                <a href="mailto:daniel.mueller@bsse.ethz.ch" class="speaker-link speaker-link--email">Email</a>
+                <a href="https://bsse.ethz.ch/people/detail-person.MTcwMTk1.TGlzdC8yNjY5LC0xMDExNjczNjI=.html" target="_blank" rel="noopener noreferrer" class="speaker-link">visit website</a>
+              </div>
+              <div class="speaker-card__media">
+                <img src="speakers/daniel-muller.jpg" alt="Daniel Müller" class="speaker-card__image">
+              </div>
+            </article>
+            <article class="speaker-card speaker-card--compact">
+              <div class="speaker-card__body">
+                <span class="speaker-tag">Organiser</span>
+                <h3>Massimo Vassalli</h3>
+                <div class="speaker-meta">Centre for the Cellular Microenvironment, James Watt School of Engineering, University of Glasgow, UK</div>
+                <a href="mailto:massimo.vassalli@glasgow.ac.uk" class="speaker-link speaker-link--email">Email</a>
+                <a href="https://www.gla.ac.uk/schools/engineering/staff/massimovassalli/" target="_blank" rel="noopener noreferrer" class="speaker-link">visit website</a>
+              </div>
+              <div class="speaker-card__media">
+                <img src="speakers/massimo-vassalli.png" alt="Massimo Vassalli" class="speaker-card__image">
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    """
     content = f"""
       <div class="home-hero row g-5 align-items-start">
         <div class="col-lg-8">
@@ -314,7 +350,6 @@ def build_home(private=False):
             <a href="{('venue.html' if not private else 'venue_tmp.html')}">Venue</a>
             <a href="{('speakers.html' if not private else 'speakers_tmp.html')}">Speakers</a>
             <a href="{('program.html' if not private else 'program_tmp.html')}">Programme</a>
-            <a href="mailto:massimo.vassalli@glasgow.ac.uk">Contact</a>
           </div>
           <section class="home-details">
             <div class="home-intro-text">
@@ -423,6 +458,32 @@ def build_speakers(private=False):
     return layout(content, "speakers", private=private)
 
 
+def build_sponsors(private=False):
+    sponsors_by_level = {}
+    for sponsor in DATA.get("sponsors", []):
+        level = sponsor.get("level") or "Sponsor"
+        sponsors_by_level.setdefault(level, []).append(sponsor)
+
+    sponsor_sections = []
+    for level in ["Gold", "Silver", "Bronze"]:
+        if level not in sponsors_by_level:
+            continue
+        cards = "".join(sponsor_detail_card(sponsor) for sponsor in sponsors_by_level[level])
+        sponsor_sections.append(
+            f'<section class="sponsor-showcase">'
+            f'<p class="eyebrow">{esc(level)} sponsor</p>'
+            f'<div class="sponsor-detail-grid">{cards}</div>'
+            f'</section>'
+        )
+    content = f"""
+      <p class="eyebrow">N4M 2027</p>
+      <h1>Sponsors</h1>
+      <p class="lead">Our sponsors support the meeting and contribute to the vibrant environment that makes N4M a place for discovery, collaboration, and innovation.</p>
+      {''.join(sponsor_sections)}
+    """
+    return layout(content, "sponsors", private=private)
+
+
 def build_program(private=False):
     overview = []
     for day in DATA.get("program_overview", []):
@@ -466,11 +527,11 @@ def build_program(private=False):
 with (ROOT / "content.json").open(encoding="utf-8") as source:
     DATA = json.load(source)
 
-write_page("index.html", build_teaser())
-write_page("index_tmp.html", build_home(private=True))
-write_page("overview_tmp.html", build_overview(private=True))
-write_page("venue_tmp.html", build_venue(private=True))
-write_page("speakers_tmp.html", build_speakers(private=True))
-write_page("program_tmp.html", build_program(private=True))
-write_page("registration_tmp.html", build_registration(private=True))
-print("Built 2027 teaser index.html and private preview pages index_tmp.html, overview_tmp.html, venue_tmp.html, speakers_tmp.html, program_tmp.html, and registration_tmp.html")
+write_page("index.html", build_home())
+write_page("overview.html", build_overview())
+write_page("venue.html", build_venue())
+write_page("speakers.html", build_speakers())
+write_page("sponsors.html", build_sponsors())
+write_page("program.html", build_program())
+write_page("registration.html", build_registration())
+print("Built 2027 public site pages: home, overview, venue, speakers, sponsors, programme, and registration.")
