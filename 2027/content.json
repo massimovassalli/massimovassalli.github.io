@@ -19,10 +19,10 @@
     "early_bird_deadline": "January 31st"
   },
   "registration": {
-    "registration_url": "",
-    "abstract_url": "",
-    "registration_note": "Registration is now open for the 2027 meeting. Please complete the registration form below when you are ready to submit your booking.",
-    "abstract_note": "Abstract submissions are now open. Please prepare your contribution using the N4M template and submit it through the form below.",
+    "registration_url": "https://iscrizioni.congressiconvegni.it/Login.asp?IDcommessa=MM27005&Lang=EN",
+    "abstract_url": "https://iscrizioni.congressiconvegni.it/ABS_Login.asp?IDcommessa=MM27005&Lang=EN",
+    "registration_note": "Registration is now open for the 2027 meeting. Please complete the registration form below when you are ready to submit your booking. The registration and abstract portals are managed through congressiconvegni.it, the official conference booking platform.",
+    "abstract_note": "Abstract submissions are now open. Please prepare your contribution following the structure and formatting requirements provided in the online submission portal. Submissions are handled through congressiconvegni.it, the official conference booking platform.",
     "fee_note": "All prices below are the early-bird registration rates. After the early-bird deadline, add €50 to the Light package, and €100 to the Standard and Full packages.",
     "fees": [
       {
@@ -320,19 +320,19 @@
       "day": "Monday",
       "range": "09:00–18:00",
       "title": "Session 1 + Session 2",
-      "summary": "Mechanical phenotyping in the morning and multiplexed measurement workflows in the afternoon."
+      "summary": "Encoding Mechanical Information and Building Biological Systems, with a full day of scientific exchange."
     },
     {
       "day": "Tuesday",
       "range": "09:00–18:00",
-      "title": "Session 3 + Session 4",
-      "summary": "Modelling and disease/regeneration themes, with poster and discussion blocks through the day."
+      "title": "Session 3 + networking afternoon",
+      "summary": "Seeing Mechanics in Action in the morning, followed by an open and flexible networking block for meetings and discussions."
     },
     {
       "day": "Wednesday",
       "range": "09:00–17:30",
-      "title": "Session 5 + free afternoon",
-      "summary": "Translational mechanobiology in the morning, followed by a more open afternoon for discussion and informal exchange."
+      "title": "Session 4 + Session 5",
+      "summary": "From Data to Prediction in the morning and translational mechanobiology in the afternoon, with the full day devoted to scientific exchange."
     },
     {
       "day": "Thursday",
@@ -366,7 +366,7 @@
     },
     {
       "time": "Monday 09:00",
-      "title": "Session 1 · Mechanical phenotyping",
+      "title": "Session 1 · Encoding Mechanical Information",
       "chair": "To be confirmed",
       "items": [
         {
@@ -388,7 +388,7 @@
     },
     {
       "time": "Monday 14:00",
-      "title": "Session 2 · Multiplexed measurement workflows",
+      "title": "Session 2 · Building Biological Systems",
       "chair": "To be confirmed",
       "items": [
         {
@@ -410,7 +410,7 @@
     },
     {
       "time": "Tuesday 09:00",
-      "title": "Session 3 · Data-informed and physics-based modelling",
+      "title": "Session 3 · Seeing Mechanics in Action",
       "chair": "To be confirmed",
       "items": [
         {
@@ -432,57 +432,67 @@
     },
     {
       "time": "Tuesday 14:00",
-      "title": "Session 4 · Mechanobiology in disease and regeneration",
-      "chair": "To be confirmed",
+      "title": "Networking afternoon",
+      "chair": "Open",
       "items": [
         {
           "time": "14:00",
-          "type": "Invited speaker",
-          "title": "Session keynote to be announced"
+          "type": "Flexible block",
+          "title": "Meeting rooms available for one-to-one discussions and small-group chats"
         },
         {
-          "time": "14:45",
-          "type": "Contributed talk",
-          "title": "Slot open"
+          "time": "15:30",
+          "type": "Networking",
+          "title": "Informal discussions, project meetings, and collaborative exchanges"
         },
         {
-          "time": "16:30",
-          "type": "Discussion",
-          "title": "Round-table discussion"
+          "time": "17:00",
+          "type": "Open session",
+          "title": "Flexible time for meetings, visits, and informal exchange"
         }
       ]
     },
     {
       "time": "Wednesday 09:00",
-      "title": "Session 5 · Translational mechanobiology",
+      "title": "Session 4 · From Data to Prediction",
       "chair": "To be confirmed",
       "items": [
         {
           "time": "09:00",
-          "type": "Special translational session",
-          "title": "Translational applications and clinical relevance"
+          "type": "Invited speaker",
+          "title": "Session keynote to be announced"
         },
         {
-          "time": "10:30",
-          "type": "Poster session",
-          "title": "Poster session and sponsor exhibit continue"
+          "time": "09:45",
+          "type": "Contributed talk",
+          "title": "Slot open"
+        },
+        {
+          "time": "11:15",
+          "type": "Discussion",
+          "title": "Modelling and predictive strategies discussion"
         }
       ]
     },
     {
-      "time": "Wednesday afternoon",
-      "title": "Free afternoon",
-      "chair": "Open",
+      "time": "Wednesday 14:00",
+      "title": "Session 5 · Translational mechanobiology",
+      "chair": "To be confirmed",
       "items": [
         {
-          "time": "Afternoon",
-          "type": "Free block",
-          "title": "Explore the territory or stay at the hotel for informal discussion"
+          "time": "14:00",
+          "type": "Special translational session",
+          "title": "Translational applications and clinical relevance"
         },
         {
-          "time": "Late afternoon",
-          "type": "Editorial corner",
-          "title": "Editorial corner and open discussion"
+          "time": "15:30",
+          "type": "Poster session",
+          "title": "Poster session and sponsor exhibit continue"
+        },
+        {
+          "time": "17:00",
+          "type": "Discussion",
+          "title": "Translational perspectives and community exchange"
         }
       ]
     },

@@ -263,13 +263,13 @@ def build_registration(private=False):
           <p class="eyebrow">Attendance</p>
           <h2>Register for N4M 2027</h2>
           <p>{esc(registration['registration_note'])}</p>
-          {registration_action(registration['registration_url'], 'Registration form')}
+          {registration_action(registration['registration_url'], 'Registration website')}
         </section>
         <section>
           <p class="eyebrow">Contributions</p>
           <h2>Submit an abstract</h2>
           <p>{esc(registration['abstract_note'])}</p>
-          {registration_action(registration['abstract_url'], 'Abstract submission form')}
+          {registration_action(registration['abstract_url'], 'Abstract submission portal')}
         </section>
       </div>
       <section class="mt-5">
@@ -511,7 +511,7 @@ def build_program(private=False):
     content = f"""
       <p class="eyebrow">N4M 2027</p>
       <h1>Programme</h1>
-      <p class="lead">The meeting follows the same broad rhythm as the 2024 edition: a Sunday opening, a full Monday–Wednesday scientific programme, and a Thursday closing session before departure.</p>
+      <p class="lead">Following the traditional N4M rhythm, the meeting begins with a Sunday opening, continues with a full Monday–Wednesday scientific programme, and closes with a Thursday session before departure. Wednesday afternoon remains intentionally flexible for networking, informal discussions, and time to explore the surrounding area.</p>
       <section aria-labelledby="day-overview-heading">
         <h2 id="day-overview-heading">Overview by day</h2>
         <div class="program-overview-grid">{''.join(overview)}</div>
