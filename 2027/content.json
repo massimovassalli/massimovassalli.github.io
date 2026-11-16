@@ -107,11 +107,11 @@
       "website": "https://www.nanosurf.com/en/"
     },
     {
-      "name": "Silver sponsor available",
+      "name": "Specto Photonics",
       "level": "Silver",
-      "logo": "",
-      "description": "Silver sponsor details to be announced.",
-      "website": ""
+      "logo": "../img/sponsors/specto-photonics-logo.png",
+      "description": "Specto Photonics is a pioneering photonics company developing innovative on-chip Brillouin spectroscopy solutions for non-contact, label-free mechanical characterization of biological samples. By making Brillouin microscopy more compact, accessible, and easy to integrate into existing optical microscopes, Specto enables researchers to investigate the 3D biomechanics of cells, tissues, and biomaterials.",
+      "website": "https://spectophotonics.com/"
     },
     {
       "name": "Silver sponsor available",
@@ -128,11 +128,11 @@
       "website": ""
     },
     {
-      "name": "Bronze sponsor available",
+      "name": "A5 Science",
       "level": "Bronze",
-      "logo": "",
-      "description": "Bronze sponsor details to be announced.",
-      "website": ""
+      "logo": "../img/sponsors/a5-science-logo.png",
+      "description": "A5 Science is a French deeptech company specializing in Atomic Force Microscopy (AFM) and nanoscale characterization. We develop advanced AFM methodologies and innovative tools to investigate the structural, mechanical and molecular properties of biological and soft-matter systems. Combining scientific expertise, technological development and customized analytical services, A5 Science supports academic and industrial partners in exploring complex systems at the nanoscale.",
+      "website": "https://a5-science.com/"
     },
     {
       "name": "Bronze sponsor available",
