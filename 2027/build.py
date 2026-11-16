@@ -20,15 +20,22 @@ def esc(value):
     return html.escape(str(value))
 
 
+def make_id(text):
+    """Generate a URL-safe id from text."""
+    return text.lower().replace(" ", "-").replace(".", "").replace("(", "").replace(")", "")
+
+
 def sponsor_page_link(item):
     target = "sponsors.html"
     name = item.get("name") or f"{item.get('level', 'Sponsor')} sponsor"
+    sponsor_id = make_id(name)
+    anchor = f"#{sponsor_id}"
     if item.get("logo"):
         logo = f'<img src="{esc(item["logo"])}" alt="{esc(name)}">'
     else:
         logo = f'<div class="sponsor-placeholder" aria-hidden="true">{esc(name)}</div>'
     return (
-        f'<a class="sponsor-group sponsor-{esc(item["level"]).lower()}" href="{target}" aria-label="View details for {esc(name)}">'
+        f'<a class="sponsor-group sponsor-{esc(item["level"]).lower()}" href="{target}{anchor}" aria-label="View details for {esc(name)}">'
         f'<span class="sponsor-level">{esc(item["level"])}</span>'
         f'{logo}'
         f'<span class="sponsor-name">{esc(name)}</span>'
@@ -39,6 +46,7 @@ def sponsor_page_link(item):
 def sponsor_detail_card(item):
     name = item.get("name") or f"{item.get('level', 'Sponsor')} sponsor"
     level = item.get("level") or "Sponsor"
+    sponsor_id = make_id(name)
     if item.get("logo"):
         media = f'<img src="{esc(item["logo"])}" alt="{esc(name)}" class="sponsor-card__image">'
     else:
@@ -52,7 +60,7 @@ def sponsor_detail_card(item):
             f'Visit website</a>'
         )
     return (
-        f'<article class="sponsor-card sponsor-card--{esc(level).lower()}">'
+        f'<article class="sponsor-card sponsor-card--{esc(level).lower()}" id="{sponsor_id}">'
         f'<div class="sponsor-card__media">{media}</div>'
         f'<div class="sponsor-card__body">'
         f'<span class="speaker-tag">{esc(level)} sponsor</span>'
