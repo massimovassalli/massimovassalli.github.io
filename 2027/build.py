@@ -262,7 +262,7 @@ def build_registration(private=False):
       <section class="date-list" aria-labelledby="dates-heading">
         <h2 id="dates-heading">Important dates</h2>
         <dl>
-          <div><dt>Abstract submission deadline</dt><dd>{esc(dates['abstract_deadline'])}</dd></div>
+          <div><dt>Abstract submission deadline</dt><dd><del>{esc(dates['abstract_deadline_previous'])}</del> {esc(dates['abstract_deadline'])}</dd></div>
           <div><dt>Early-bird registration deadline</dt><dd>{esc(dates['early_bird_deadline'])}</dd></div>
         </dl>
       </section>
@@ -369,7 +369,7 @@ def build_home(private=False):
             </div>
             <h2>Important dates</h2>
             <ul class="topic-list">
-              <li>Abstract submission deadline: {esc(dates['abstract_deadline'])}</li>
+              <li>Abstract submission deadline: <del>{esc(dates['abstract_deadline_previous'])}</del> {esc(dates['abstract_deadline'])}</li>
               <li>Early-bird registration deadline: {esc(dates['early_bird_deadline'])}</li>
             </ul>
           </section>
