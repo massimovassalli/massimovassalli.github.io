@@ -519,7 +519,7 @@ def build_program(private=False):
     content = f"""
       <p class="eyebrow">N4M 2027</p>
       <h1>Programme</h1>
-      <p class="lead">Following the traditional N4M rhythm, the meeting begins with a Sunday opening, continues with a full Monday–Wednesday scientific programme, and closes with a Thursday session before departure. Wednesday afternoon remains intentionally flexible for networking, informal discussions, and time to explore the surrounding area.</p>
+      <p class="lead">Following the traditional N4M rhythm, the meeting begins with a Sunday opening, continues with a Monday–Wednesday scientific programme, and closes with a Thursday session before departure. Tuesday afternoon also includes flexible time for networking, informal discussions, and time to explore the surrounding area.</p>
       <section aria-labelledby="day-overview-heading">
         <h2 id="day-overview-heading">Overview by day</h2>
         <div class="program-overview-grid">{''.join(overview)}</div>
