@@ -107,11 +107,11 @@
       "website": "https://spectophotonics.com/"
     },
     {
-      "name": "Silver sponsor available",
+      "name": "Rivercyte",
       "level": "Silver",
-      "logo": "",
-      "description": "Silver sponsor details to be announced.",
-      "website": ""
+      "logo": "../img/sponsors/rivercyte.svg",
+      "description": "Founded by researchers from the Max Planck Institute for the Science of Light, Rivercyte makes cell mechanics a routine readout for research and clinical studies. Its benchtop deformability cytometer Naiad images thousands of single cells per second as they deform in a microfluidic channel and extracts more than 20 label-free mechanical and morphological features per cell. AI-based analysis turns these data into fast, quantitative insight into cell state and function.",
+      "website": "https://rivercyte.com"
     },
     {
       "name": "Silver sponsor available",
