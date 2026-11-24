@@ -347,6 +347,37 @@ def build_home(private=False):
         </div>
       </section>
     """
+    local_organisers_html = """
+      <section class="organiser-section" aria-labelledby="local-organisers-heading">
+        <h2 id="local-organisers-heading">Local organisers</h2>
+        <div class="speaker-grid">
+          <div class="speaker-row">
+            <article class="speaker-card speaker-card--compact">
+              <div class="speaker-card__body">
+                <span class="speaker-tag">Local organiser</span>
+                <h3>Federica Viti</h3>
+                <div class="speaker-meta">Institute of Biophysics of the National Research Council, Genova, Italy</div>
+                <a href="http://users.ge.ibf.cnr.it/smml/" target="_blank" rel="noopener noreferrer" class="speaker-link">visit website</a>
+              </div>
+              <div class="speaker-card__media">
+                <img src="organisers/federica-viti.jpg" alt="Federica Viti" class="speaker-card__image">
+              </div>
+            </article>
+            <article class="speaker-card speaker-card--compact">
+              <div class="speaker-card__body">
+                <span class="speaker-tag">Local organiser</span>
+                <h3>Claudio Canale</h3>
+                <div class="speaker-meta">Department of Physics, University of Genoa, Genoa, Italy</div>
+                <a href="https://rubrica.unige.it/personale/UkNHU1po" target="_blank" rel="noopener noreferrer" class="speaker-link">visit website</a>
+              </div>
+              <div class="speaker-card__media">
+                <img src="organisers/claudio-canale.png" alt="Claudio Canale" class="speaker-card__image">
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    """
     content = f"""
       <div class="home-hero row g-5 align-items-start">
         <div class="col-lg-8">
@@ -374,6 +405,7 @@ def build_home(private=False):
             </ul>
           </section>
           {organisers_html}
+          {local_organisers_html}
         </div>
         <aside class="col-lg-4 sponsor-rail" aria-labelledby="home-sponsors-heading">
           <div class="sponsor-header-row">
