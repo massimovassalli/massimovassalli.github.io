@@ -335,6 +335,8 @@ section, article { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px soli
   letter-spacing: .08em;
   background: linear-gradient(135deg, var(--n4m-accent), #7ea4aa);
 }
+.organiser-section .speaker-card { min-height: 220px; }
+.organiser-section .speaker-card__media { flex-basis: 160px; }
 .speaker-card--empty { min-height: 120px; }
 
 .sponsor-card {
@@ -462,6 +464,7 @@ section, article { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px soli
 @media (max-width: 520px) {
   .speaker-card { flex-direction: column-reverse; min-height: 0; }
   .speaker-card__media { flex: 0 0 auto; height: 260px; }
+  .organiser-section .speaker-card__media { height: 200px; }
   .speaker-card--empty .speaker-card__media { display: none; }
   .sponsor-card { grid-template-columns: 1fr; }
 }

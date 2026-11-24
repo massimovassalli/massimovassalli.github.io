@@ -324,7 +324,6 @@ def build_home(private=False):
                 <span class="speaker-tag">Organiser</span>
                 <h3>Daniel Müller</h3>
                 <div class="speaker-meta">Full Professor, Department of Biosystems Science and Engineering, ETH Zurich, Basel</div>
-                <a href="mailto:daniel.mueller@bsse.ethz.ch" class="speaker-link speaker-link--email">Email</a>
                 <a href="https://bsse.ethz.ch/people/detail-person.MTcwMTk1.TGlzdC8yNjY5LC0xMDExNjczNjI=.html" target="_blank" rel="noopener noreferrer" class="speaker-link">visit website</a>
               </div>
               <div class="speaker-card__media">
@@ -336,7 +335,6 @@ def build_home(private=False):
                 <span class="speaker-tag">Organiser</span>
                 <h3>Massimo Vassalli</h3>
                 <div class="speaker-meta">Centre for the Cellular Microenvironment, James Watt School of Engineering, University of Glasgow, UK</div>
-                <a href="mailto:massimo.vassalli@glasgow.ac.uk" class="speaker-link speaker-link--email">Email</a>
                 <a href="https://www.gla.ac.uk/schools/engineering/staff/massimovassalli/" target="_blank" rel="noopener noreferrer" class="speaker-link">visit website</a>
               </div>
               <div class="speaker-card__media">
