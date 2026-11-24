@@ -358,7 +358,7 @@ def build_home(private=False):
                 <a href="http://users.ge.ibf.cnr.it/smml/" target="_blank" rel="noopener noreferrer" class="speaker-link">visit website</a>
               </div>
               <div class="speaker-card__media">
-                <img src="organisers/federica-viti.jpg" alt="Federica Viti" class="speaker-card__image">
+                <img src="organisers/federica-viti.png" alt="Federica Viti" class="speaker-card__image">
               </div>
             </article>
             <article class="speaker-card speaker-card--compact">
