@@ -115,11 +115,11 @@
       "website": "https://rivercyte.com"
     },
     {
-      "name": "Silver sponsor available",
+      "name": "Bruker",
       "level": "Silver",
-      "logo": "",
-      "description": "Silver sponsor details to be announced.",
-      "website": ""
+      "logo": "../img/sponsors/bruker-800.jpg",
+      "description": "Bruker BioAFM develops high-performance Atomic Force Microscopes (AFM) and Optical Tweezers for life science research. AI-assisted nanomechanical analysis, advanced machine-learning capabilities, and cutting-edge automation features increase throughput and generate statistically relevant datasets. Environmental control accessories support the investigation of living cells and tissues under near-physiological conditions. Come by our booth to learn more!",
+      "website": "https://www.bruker.com/bioafm"
     },
     {
       "name": "A5 Science",
